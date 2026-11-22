@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Motoristas Angola</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;padding:15px;background:#f5f5f5}
+.box{background:white;padding:20px;border-radius:10px;max-width:500px;margin:auto}
+h2{color:#003399;text-align:center}
+.iban{background:#eef3ff;padding:10px;border:2px dashed #0040ff;text-align:center;font-weight:bold}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:8px;box-sizing:border-box}
+button{background:#0040ff;color:white;padding:14px;width:100%;border:none;border-radius:8px;font-size:16px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>🇦🇴 Motoristas Angola</h2>
+<div class="iban">IBAN: AO06.0040.0000.7034.7306.1019.0<br>Titular: Dário</div>
+<br>
+<input id="nome" placeholder="Seu nome completo">
+<input id="telefone" placeholder="Telefone / WhatsApp">
+<select id="provincia">
+<option>Luanda</option><option>Benguela</option><option>Huambo</option><option>Huíla</option><option>Cabinda</option><option>Outra</option>
+</select>
+<input id="carta" placeholder="Nº da carta de condução">
+<button onclick="pagar()">Enviar Comprovativo</button>
+<p id="msg" style="text-align:center;color:green"></p>
+</div>
+<script>
+function pagar(){
+ let n=document.getElementById('nome').value;
+ if(n==''){alert('Escreve seu nome');return;}
+ document.getElementById('msg').innerHTML='Obrigado '+n+'! Envie o comprovativo para o WhatsApp com seu nome. IBAN: AO06.0040.0000.7034.7306.1019.0';
+ window.open('https://wa.me/244900000000?text=Ola, sou '+n+', paguei para Motoristas Angola. IBAN AO06.0040.0000.7034.7306.1019.0','_blank');
+}
+</script>
+</body>
+</html>
