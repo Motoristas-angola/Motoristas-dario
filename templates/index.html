@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Motoristas Angola</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;padding:15px;background:#f0f0f0}
+.box{background:white;padding:20px;border-radius:12px;max-width:400px;margin:auto;box-shadow:0 2px 10px #0001}
+h2{color:#003399}
+.iban{background:#eef3ff;padding:10px;border-left:4px solid #0040ff;font-weight:bold}
+input,select{width:100%;padding:12px;margin:6px 0;box-sizing:border-box;border:1px solid #ccc;border-radius:6px}
+button{background:#0040ff;color:white;padding:14px;width:100%;border:none;border-radius:6px;font-size:16px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Motoristas-dario</h2>
+<div class="iban">IBAN: AO06.0040.0000.7034.7306.1019.0</div>
+<p>Pague e inscreva-se</p>
+<form action="/inscrever" method="post">
+<input name="nome" placeholder="Nome completo" required>
+<input name="telefone" placeholder="Telefone 9xx xxx xxx" required>
+<select name="categoria"><option>A - Moto</option><option>B - Ligeiro</option><option>C - Pesado</option><option>C1 - Profissional</option></select>
+<input name="comprovativo" placeholder="Nº do Comprovativo de Pagamento" required>
+<button type="submit">ENVIAR INSCRIÇÃO</button>
+</form>
+<p style="font-size:12px;color:gray;margin-top:20px;text-align:center">Sistema Motoristas Angola</p>
+</div>
+</body>
+</html>
